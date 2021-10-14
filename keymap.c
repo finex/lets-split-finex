@@ -128,6 +128,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define KC_SYES LT(_SYMB, KC_ESC)     // Esc / _symbols
 #define KC_NBSC LT(_NUMB, KC_BSPC)    // Backspace / _numbers
 #define KC_FULE LT(_FUNC, KC_LEFT)    // Left / _functions
+#define KC_FU MO(_FUNC)               // _functions
 
 // - Custom keys/modifiers:
 #define KC_ATAB RALT_T(KC_TAB)        // - Tab / Alt Gr
@@ -272,7 +273,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_ATAB, KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_TDSC, KC_AEQL, \
    KC_CESC, KC_GU_A, KC_AL_R, KC_CT_S, KC_T_SH, KC_G,    KC_M,    KC_N_SH, KC_CT_E, KC_AL_I, KC_GU_O, KC_CMIN, \
    KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, \
-   KC_GSPC, KC_HYBL, KC_MEBR, KC_NUES, KC_NBSC, KC_CDEL, KC_CENT, KC_SYSP, KC_FULE, KC_DOWN, KC_UP,   KC_GURI  \
+   KC_GSPC, KC_HYBL, KC_MEBR, KC_FU,   KC_NBSC, KC_CDEL, KC_CENT, KC_SYSP, KC_FULE, KC_DOWN, KC_UP,   KC_GURI  \
 ),
 
 /* QWERTY */
@@ -280,7 +281,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_ATAB, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_AEQL, \
    KC_CESC, KC_GU_A, KC_AL_S, KC_CT_D, KC_F_SH, KC_G,    KC_H,    KC_J_SH, KC_CT_K, KC_AL_L, KC_GU_SC,KC_CMIN, \
    KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, \
-   KC_GSPC, KC_HYBL, KC_MEBR, KC_NUES, KC_NBSC, KC_CDEL, KC_CENT, KC_SYSP, KC_FULE, KC_DOWN, KC_UP,   KC_GURI  \
+   KC_GSPC, KC_HYBL, KC_MEBR, KC_FU,   KC_NBSC, KC_CDEL, KC_CENT, KC_SYSP, KC_FULE, KC_DOWN, KC_UP,   KC_GURI  \
 ),
 
 
