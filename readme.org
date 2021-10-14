@@ -46,7 +46,7 @@ setxkbmap -layout us -variant intl -option eurosign:e
 #+end_src
 
 #+CAPTION: Let's Split FiNeX layout
-[[https://raw.githubusercontent.com/finex/redox-finex/awesomewm/images/redox-finex.png]]
+[[https://raw.githubusercontent.com/finex/lets-split-finex/main/lets-split-finex.png]]
 
 ** Keys Legend
 The following scheme describe the meaning of the keys symbols positions.
