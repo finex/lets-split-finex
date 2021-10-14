@@ -10,6 +10,8 @@ enum{
   _FUNC,
   _RHSH, // Righ hand shifted keycodes
   _LHSH, // Left hand shifted keycodes
+  _RHSH_QWERTY, // Righ hand shifted keycodes (qwerty version)
+  _LHSH_QWERTY, // Left hand shifted keycodes (qwerty version)
   _ADJUST
 };
 
@@ -118,37 +120,26 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define KC_N_SH LT(_LHSH, KC_N)       // Pressing N key, enable shifted keys on other half (the left one)
 #define KC_T_SH LT(_RHSH, KC_T)       // Pressing T key, enable shifted keys on other half (the right one)
 // - Custom home row layers (qwerty):
-#define KC_J_SH LT(_LHSH, KC_J)       // Pressing J key, enable shifted keys on other half (the left one)
-#define KC_F_SH LT(_RHSH, KC_F)       // Pressing F key, enable shifted keys on other half (the right one)
+#define KC_J_SH LT(_LHSH_QWERTY, KC_J)       // Pressing J key, enable shifted keys on other half (the left one)
+#define KC_F_SH LT(_RHSH_QWERTY, KC_F)       // Pressing F key, enable shifted keys on other half (the right one)
 
 // - Custom layers:
 #define KC_SYSP LT(_SYMB, KC_SPC)     // Space / _symbols
 #define KC_SYES LT(_SYMB, KC_ESC)     // Esc / _symbols
 #define KC_NBSC LT(_NUMB, KC_BSPC)    // Backspace / _numbers
-#define KC_FUEN LT(_FUNC, KC_ENT)     // Enter / _functions
-#define KC_NURI LT(_NUMB, KC_RGHT)    // Right / _numbers
+#define KC_FULE LT(_FUNC, KC_LEFT)    // Left / _functions
 
 // - Custom keys/modifiers:
 #define KC_ATAB RALT_T(KC_TAB)        // - Tab / Alt Gr
-#define KC_AGLE RALT_T(KC_LEFT)       // - Left arrow / Alt Gr
 #define KC_CESC LCTL_T(KC_ESC)        // - Esc / Left Ctrl
 #define KC_CDEL LCTL_T(KC_DEL)        // - Esc / Left Ctrl
 #define KC_AEQL LALT_T(KC_EQL)        // - Equals / Left Alt
 #define KC_CMIN RCTL_T(KC_MINUS)      // - Minus / Right Ctrl
-#define KC_RATA RALT_T(KC_TAB)        // - Tab / Left Alt
-
+#define KC_CENT RCTL_T(KC_ENT)        // Enter / Right ctrl
+#define KC_GURI RGUI_T(KC_RGHT)    // Right / Right gui
 #define KC_HYBL HYPR_T(KC_LBRC)       // - Left Bracket / Hyper
-#define KC_MEBR MEH_T(KC_RBRC)        // - Right Bracket / Hyper
-
-
-// -- PC mode:
+#define KC_MEBR MEH_T(KC_RBRC)        // - Right Bracket / Meh
 #define KC_GSPC LGUI_T(KC_SPC)        // - Space / Left GUI
-#define KC_CBSP LCTL_T(KC_BSPC)       // - Backspace / Left Ctrl
-#define KC_GUDE LGUI_T(KC_DEL)        // - Del / Left GUI
-// -- Mac os mode:
-#define KC_CSPC LCTL_T(KC_SPC)        // - Space / Left Ctrl
-#define KC_GBSP LGUI_T(KC_BSPC)       // - Backspace / Left GUI
-#define KC_CTDE LCTL_T(KC_DEL)        // - Del / Left Ctrl
 
 // Home row mod tap keys (colemak):
 // - Left hand
@@ -168,7 +159,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define KC_GU_SC RGUI_T(KC_SCLN)       // ; / Right Gui
 #define KC_AL_L  LALT_T(KC_L)          // L / Left Alt (left alt because used as Emacs M- )
 #define KC_CT_K  RCTL_T(KC_K)          // K / Right Ctrl
-
 
 // - Tap dance:
 #define KC_TDSC TD(TD_SCLN)           // ;; -> :
@@ -282,15 +272,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_ATAB, KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_TDSC, KC_AEQL, \
    KC_CESC, KC_GU_A, KC_AL_R, KC_CT_S, KC_T_SH, KC_G,    KC_M,    KC_N_SH, KC_CT_E, KC_AL_I, KC_GU_O, KC_CMIN, \
    KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, \
-   KC_GSPC, KC_HYBL, KC_MEBR, KC_SYES, KC_NBSC, KC_CDEL, KC_FUEN, KC_SYSP, KC_AGLE, KC_DOWN, KC_UP,   KC_NURI  \
+   KC_GSPC, KC_HYBL, KC_MEBR, KC_NUES, KC_NBSC, KC_CDEL, KC_CENT, KC_SYSP, KC_FULE, KC_DOWN, KC_UP,   KC_GURI  \
 ),
 
 /* QWERTY */
-[_COLEMAKDHMK] = LAYOUT_ortho_4x12(
+[_QWERTY] = LAYOUT_ortho_4x12(
    KC_ATAB, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_AEQL, \
    KC_CESC, KC_GU_A, KC_AL_S, KC_CT_D, KC_F_SH, KC_G,    KC_H,    KC_J_SH, KC_CT_K, KC_AL_L, KC_GU_SC,KC_CMIN, \
    KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, \
-   KC_GSPC, KC_HYBL, KC_MEBR, KC_SYES, KC_NBSC, KC_CDEL, KC_FUEN, KC_SYSP, KC_AGLE, KC_DOWN, KC_UP,   KC_NURI  \
+   KC_GSPC, KC_HYBL, KC_MEBR, KC_NUES, KC_NBSC, KC_CDEL, KC_CENT, KC_SYSP, KC_FULE, KC_DOWN, KC_UP,   KC_GURI  \
 ),
 
 
@@ -319,21 +309,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 
-/* Left hand shifted keycodes */
+/* Left hand shifted keycodes (colemak) */
 [_LHSH] = LAYOUT_ortho_4x12( \
   _______, S(KC_Q) ,S(KC_W) ,S(KC_F) ,S(KC_P) ,S(KC_B), _______, _______, _______, _______, _______, _______, \
   _______, S(KC_A) ,S(KC_R) ,S(KC_S) ,S(KC_T) ,S(KC_G), _______, _______, _______, _______, _______, _______, \
   _______, S(KC_Z) ,S(KC_X) ,S(KC_C) ,S(KC_D) ,S(KC_V), _______, _______, _______, _______, _______, _______, \
-  _______, _______, _______, _______, _______, _______, KC_DEL , KC_BSPC, KC_ESC, _______, _______, _______ \
+  _______, _______, _______, _______, _______, _______, KC_DEL , KC_BSPC, _______,_______, _______, _______ \
 ),
 
-/* Right hand shifted keycodes */
+/* Right hand shifted keycodes (colemak)*/
 [_RHSH] = LAYOUT_ortho_4x12( \
   _______, _______, _______, _______, _______, _______, S(KC_J) ,S(KC_L) ,S(KC_U) ,S(KC_Y) ,KC_COLN, _______, \
   _______, _______, _______, _______, _______, _______, S(KC_M) ,S(KC_N) ,S(KC_E) ,S(KC_I) ,S(KC_O), _______, \
   _______, _______, _______, _______, _______, _______, S(KC_K) ,S(KC_H) ,KC_LABK ,KC_RABK ,KC_QUES, _______, \
-  _______, _______, _______, KC_TAB , KC_SPC , KC_ENT , _______, _______, _______, _______, _______, _______ \
+  _______, _______, _______, _______, KC_SPC , KC_ENT , _______, _______, _______, _______, _______, _______ \
 ),
+
+
+/* Left hand shifted keycodes (qwerty) */
+[_LHSH_QWERTY] = LAYOUT_ortho_4x12( \
+  _______, S(KC_Q) ,S(KC_W) ,S(KC_E) ,S(KC_R) ,S(KC_T), _______, _______, _______, _______, _______, _______, \
+  _______, S(KC_A) ,S(KC_S) ,S(KC_D) ,S(KC_F) ,S(KC_G), _______, _______, _______, _______, _______, _______, \
+  _______, S(KC_Z) ,S(KC_X) ,S(KC_C) ,S(KC_V) ,S(KC_B), _______, _______, _______, _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, KC_DEL , KC_BSPC, _______,_______, _______, _______ \
+),
+
+/* Right hand shifted keycodes (qwerty)*/
+[_RHSH_QWERTY] = LAYOUT_ortho_4x12( \
+  _______, _______, _______, _______, _______, _______, S(KC_Y) ,S(KC_U) ,S(KC_I) ,S(KC_O) ,S(KC_P), _______, \
+  _______, _______, _______, _______, _______, _______, S(KC_H) ,S(KC_J) ,S(KC_K) ,S(KC_L) ,KC_COLN, _______, \
+  _______, _______, _______, _______, _______, _______, S(KC_N) ,S(KC_M) ,KC_LABK ,KC_RABK ,KC_QUES, _______, \
+  _______, _______, _______, _______, KC_SPC , KC_ENT , _______, _______, _______, _______, _______, _______ \
+),
+
 
 
 

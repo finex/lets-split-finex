@@ -101,20 +101,18 @@
       "t": "#000000\n\n\n\n\n\n#d0761a\n\n#34a729\n\n#1c9cb4"
     },
     "X\nx\n\n\n\n\nNum\n\n_\n\n:-(",
+    "C\nc\n\n\n\n\nIns\n\n:\n\n:-)",
     {
+      "t": "#000000\n\n\n\n\n\n#d0761a\n\n#34a729"
+    },
+    "D\nd\n\n\n\n\nCaps\n\n~",
+    {
+      "t": "#000000\n\n\n\n\n\n#d0761a\n\n#34a729\n\n#1c9cb4"
+    },
+    "V\nv\n\n\n\n\nApp\n\n=\n\n[",
+    {
+      "x": 1,
       "t": "#000000\n\n\n\n\n\n\n\n#34a729\n\n#1c9cb4"
-    },
-    "C\nc\n\n\n\n\n\n\n:\n\n:-)",
-    {
-      "t": "#000000\n\n\n\n\n\n\n\n#34a729"
-    },
-    "D\nd\n\n\n\n\n\n\n~",
-    {
-      "t": "#000000\n\n\n\n\n\n\n\n#34a729\n\n#1c9cb4"
-    },
-    "V\nv\n\n\n\n\n\n\n=\n\n[",
-    {
-      "x": 1
     },
     "K\nk\n\n\n\n\n\n\n`\n\n]",
     {
@@ -131,13 +129,17 @@
     "\n)\n\n\nShift"
   ],
   [
-    "|\n\\\n\n\nGui",
-    "\n+\n\n\nHyper",
-    "_\n-\n\n\nMeh",
-    "\n*\n\n\n≡ Fun",
+    "\n␣\n\n\nGui",
+    "{\n[\n\n\nHyper",
+    "}\n]\n\n\nMeh",
+    {
+      "a": 7
+    },
+    "\n\n\n\n≡ Fun",
     {
       "c": "#da722b",
-      "t": "#000000"
+      "t": "#000000",
+      "a": 4
     },
     "␣\n⌫\n\n\n&dArr; Lower",
     {
