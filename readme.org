@@ -1,0 +1,83 @@
+#+TITLE: Let's Split Evo (Colemak DHm)
+#+AUTHOR: FiNeX (https://www.leonardofinetti.it)
+#+DATE: 14/10/2021
+#+STARTUP: inlineimages
+#+STARTUP: nofold
+
+* Table of Content :TOC:
+- [[#customized-keymap-for-lets-split-by-leonardo-finex-finetti][Customized keymap for Let's Split by Leonardo (FiNeX) Finetti]]
+- [[#features][Features]]
+- [[#layout][Layout]]
+  - [[#keys-legend][Keys Legend]]
+  - [[#color-legend][Color Legend]]
+- [[#changelog][Changelog]]
+- [[#todo][Todo]]
+
+* Customized keymap for Let's Split by Leonardo (FiNeX) Finetti
+This keymap use the custom Redox keymap with some changes to suit the smaller size.
+Mainly having most used symbols on a separated layer copying the common symbols from the
+number keys to the second row, adding other symbols and ~◌̀~ ~◌́~ dead keys for
+accents.
+
+
+* Features
+- Layout: Colemak DHm.
+- Added redundant ~Space~, ~Esc~, ~Ctrl~ and ~Enter~ keys. I like to have this keys on both halves.
+- Added macro to print ~:-(~ and ~:-)~ strings.
+- Added more arrows on layers.
+- Added ~(~ and ~)~ on Shifts keys (Space Cadet Shift).
+- Tapdance:
+  - ~;~ × 2 = ~:~
+  - ~[~ × 2 = ~{~
+  - ~]~ × 2 = ~}~
+- Removed Mouse and media support.
+- Added "Print Screen" key.
+- Added ~Alt~ modifier on home row.
+- Added ~Ctrl~ modifier on home row.
+- Added ~Ctrl~ modifier on home row.
+- Added ~Shift other half~ on home keys: this allows to shift the right half pressing ~t~ on the left, and the opposite pressing ~n~.
+
+* Layout
+This keyboard layout is intended to be used with English (US, intl, with dead keys) settings on PC.
+
+On GNU/Linux systems use the following command to set the keyboard layout:
+#+begin_src sh
+setxkbmap -layout us -variant intl -option eurosign:e
+#+end_src
+
+#+CAPTION: Let's Split FiNeX layout
+[[https://raw.githubusercontent.com/finex/redox-finex/awesomewm/images/redox-finex.png]]
+
+** Keys Legend
+The following scheme describe the meaning of the keys symbols positions.
+
+|-----------------+---------------+---------------|
+|                 |               |               |
+|-----------------+---------------+---------------|
+| Shifted key (*) | Symbols Layer | Shifted AltGr |
+|-----------------+---------------+---------------|
+| Functions Layer | Double Tap    |               |
+|-----------------+---------------+---------------|
+| Single Tap      | Numbers Layer | AltGr         |
+|-----------------+---------------+---------------|
+|                 | Modifier      |               |
+|-----------------+---------------+---------------|
+
+(*): Shift is enabled with standard key or with custom home row shitfs which
+enables left top corner keycode on thumbs keys to make it easier use the
+keyboard when opposite hand use the mouse.
+
+** Color Legend
+- Green: Symbols & Navigation layer
+- Blue: Numbers Layer
+- Orange: Functions Layer
+- Red: Tap dance
+- Pink: Custom shift to enable shifted keys on opposite half and on same thumb
+  cluster
+
+* Changelog
+- 2021/10/14
+  First public release.
+
+* Todo
+- Add mouse and multimedia keys.
