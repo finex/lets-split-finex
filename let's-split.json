@@ -7,7 +7,7 @@
       "name": "Bamboo",
       "style": "background-image: url('/bg/wood/bamboo.jpg');"
     },
-    "css": "* {\n    font-family: 'Iosevka SS04', sans-serif;\n} \n\n.keylabel10{\n    margin-top:0px;\n    font-size:8px!important;\n}\n\n.keylabel1,\n.keylabel3,\n.keylabel5,\n.keylabel7{\n    font-weight:400;\n}"
+    "css": "* {\n    font-family: 'Iosevka SS04', sans-serif;\n} \n\n.keylabel10{\n    margin-top:0px;\n    font-size:8px!important;\n}\n\n.keylabel1,\n.keylabel3,\n.keylabel5,\n.keylabel7{\n    font-weight:400;\n}\n\n.keylabel11{\n    margin-top:1px;\n    font-size:6px!important;\n    color: #777!important;\n}"
   },
   [
     {
@@ -17,14 +17,18 @@
     "\nTab\n\n\nAlt Gr",
     {
       "c": "#d8cbbb",
-      "t": "#000000\n\n\n\n\n\n\n\n#34a729\n\n#1c9cb4"
+      "t": "#000000\n\n\n\n\n\n\n\n#34a729\n\n#1c9cb4",
+      "a": 0
     },
-    "Q\nq\n\n\n\n\n\n\n!",
-    "W\nw\n\n\n\n\n\n\n@\n\n↑",
+    "Q\nq\n\n\n\nRESET\n\n\n!",
+    "W\nw\n\n\n\nCOLEMAK\n\n\n@\n\n↑",
     {
       "t": "#000000\n\n\n\n\n\n\n\n#34a729"
     },
-    "F\nf\n\n\n\n\n\n\n#",
+    "F\nf\n\n\n\nQWERTY\n\n\n#",
+    {
+      "a": 4
+    },
     "P\np\n\n\n\n\n\n\n$",
     {
       "t": "#000000\n\n\n\n\n\n\n\n#34a729\n\n#1c9cb4"

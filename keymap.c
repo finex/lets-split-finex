@@ -15,7 +15,6 @@ enum{
   _ADJUST
 };
 
-
 // Custom keycodes
 enum custom_keycodes {
   COLEMAKDHMK = SAFE_RANGE,
@@ -43,8 +42,6 @@ enum tap_dance{
   TD_RBRC, // ]] -> }
   TD_QMRK  // // -> ?
 };
-
-
 
 // Semicolon to Colon
 void dance_scln_finished (qk_tap_dance_state_t *state, void *user_data) {
@@ -100,15 +97,12 @@ void dance_rbrc_reset (qk_tap_dance_state_t *state, void *user_data) {
   }
 }
 
-
 //Tap Dance Definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_SCLN]  = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_scln_finished, dance_scln_reset),
   [TD_LBRC]  = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_lbrc_finished, dance_lbrc_reset),
   [TD_RBRC]  = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_rbrc_finished, dance_rbrc_reset)
 };
-
-
 
 
 // Shortcuts to make keymap more readable
@@ -122,14 +116,12 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 // - Custom home row layers (qwerty):
 #define KC_J_SH LT(_LHSH_QWERTY, KC_J)       // Pressing J key, enable shifted keys on other half (the left one)
 #define KC_F_SH LT(_RHSH_QWERTY, KC_F)       // Pressing F key, enable shifted keys on other half (the right one)
-
 // - Custom layers:
 #define KC_SYSP LT(_SYMB, KC_SPC)     // Space / _symbols
 #define KC_SYES LT(_SYMB, KC_ESC)     // Esc / _symbols
 #define KC_NBSC LT(_NUMB, KC_BSPC)    // Backspace / _numbers
 #define KC_FULE LT(_FUNC, KC_LEFT)    // Left / _functions
 #define KC_FU MO(_FUNC)               // _functions
-
 // - Custom keys/modifiers:
 #define KC_ATAB RALT_T(KC_TAB)        // - Tab / Alt Gr
 #define KC_CESC LCTL_T(KC_ESC)        // - Esc / Left Ctrl
@@ -141,7 +133,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define KC_HYBL HYPR_T(KC_LBRC)       // - Left Bracket / Hyper
 #define KC_MEBR MEH_T(KC_RBRC)        // - Right Bracket / Meh
 #define KC_GSPC LGUI_T(KC_SPC)        // - Space / Left GUI
-
 // Home row mod tap keys (colemak):
 // - Left hand
 #define KC_GU_A LGUI_T(KC_A)          // A / Left Gui
@@ -160,17 +151,13 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define KC_GU_SC RGUI_T(KC_SCLN)       // ; / Right Gui
 #define KC_AL_L  LALT_T(KC_L)          // L / Left Alt (left alt because used as Emacs M- )
 #define KC_CT_K  RCTL_T(KC_K)          // K / Right Ctrl
-
 // - Tap dance:
 #define KC_TDSC TD(TD_SCLN)           // ;; -> :
 #define KC_TDLB TD(TD_LBRC)           // [[ -> {
 #define KC_TDRB TD(TD_RBRC)           // ]] -> }
-
 // - Keyboard base maps:
 #define LR1 COLEMAKDHMK
 #define LR2 QWERTY
-
-
 
 
 // Send custom strings or change default base layer
@@ -267,6 +254,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   }
 }
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Colemak Mod DH-MK */
 [_COLEMAKDHMK] = LAYOUT_ortho_4x12(
@@ -283,7 +271,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, \
    KC_GSPC, KC_HYBL, KC_MEBR, KC_FU,   KC_NBSC, KC_CDEL, KC_CENT, KC_SYSP, KC_FULE, KC_DOWN, KC_UP,   KC_GURI  \
 ),
-
 
 /* Numbers (Lower) */
 [_NUMB] = LAYOUT_ortho_4x12( \
@@ -309,7 +296,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
 ),
 
-
 /* Left hand shifted keycodes (colemak) */
 [_LHSH] = LAYOUT_ortho_4x12( \
   _______, S(KC_Q) ,S(KC_W) ,S(KC_F) ,S(KC_P) ,S(KC_B), _______, _______, _______, _______, _______, _______, \
@@ -325,7 +311,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, _______, _______, S(KC_K) ,S(KC_H) ,KC_LABK ,KC_RABK ,KC_QUES, _______, \
   _______, _______, _______, _______, KC_SPC , KC_ENT , _______, _______, _______, _______, _______, _______ \
 ),
-
 
 /* Left hand shifted keycodes (qwerty) */
 [_LHSH_QWERTY] = LAYOUT_ortho_4x12( \
@@ -343,9 +328,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, KC_SPC , KC_ENT , _______, _______, _______, _______, _______, _______ \
 ),
 
-
-
-
 /* Adjust (Lower + Raise) */
 [_ADJUST] =  LAYOUT_ortho_4x12( \
   _______, RESET,   LR1,     LR2,     _______, _______, _______, _______, _______, _______, _______, _______, \
@@ -353,7 +335,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
 )
-
 
 };
 
