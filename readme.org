@@ -12,9 +12,10 @@
   - [[#color-legend][Color Legend]]
 - [[#changelog][Changelog]]
 - [[#todo][Todo]]
+- [[#finex-qmk-layouts][FiNeX QMK Layouts]]
 
 * Customized keymap for Let's Split by Leonardo (FiNeX) Finetti
-This keymap use the custom Redox keymap with some changes to suit the smaller size.
+This keymap use my custom [[https://github.com/finex/redox-finex/][Redox]] keymap with some changes to suit the smaller size.
 Mainly having most used symbols on a separated layer copying the common symbols from the
 number keys to the second row, adding other symbols and ~◌̀~ ~◌́~ dead keys for
 accents.
@@ -81,3 +82,6 @@ keyboard when opposite hand use the mouse.
 
 * Todo
 - Add mouse and multimedia keys.
+
+* FiNeX QMK Layouts
+All my custom QMK layouts are available on the following repo:  https://github.com/finex/qmk-keyboard-layouts-finex
